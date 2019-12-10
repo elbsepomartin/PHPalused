@@ -20,5 +20,5 @@ function query($sql, $link){
         echo 'Probleem päringuga <b>'.$sql.'</b><br>';
         return false;
     }
-    return true;
+    return $result;
 }

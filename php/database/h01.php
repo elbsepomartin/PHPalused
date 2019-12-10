@@ -8,8 +8,9 @@ require_once 'config.php';
 
 // ühendus ikt serveris oleva andmebaasiga
 $ikt = connect(HOST, USER, PASS, DBNAME);
+
 // vaatame andmeid
 $sql = 'SELECT * FROM koolid2015';
-$result = query($sql, $ikt);
+$result = getData($sql, $ikt);
 echo '<pre>';
 print_r($result);

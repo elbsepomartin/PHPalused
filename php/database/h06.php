@@ -12,9 +12,12 @@ $ikt = connect(HOST, USER, PASS, DBNAME);
 
 // lehe väljund
 echo '<h1>Harjutus 06</h1>';
+// küsime kõik andmed
+
+
 // kustutamise päring
-$sql = 'DELETE FROM kliendid WHERE id="2"';
+/* $sql = 'DELETE FROM kliendid WHERE id="2"';
 $result = query($sql, $ikt);
 if($result){
     echo 'Andmebaasist on kustutatud '.mysqli_affected_rows($ikt).' rida<br>';
-}
+} */

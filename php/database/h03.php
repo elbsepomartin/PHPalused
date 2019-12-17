@@ -9,7 +9,7 @@ require_once 'valjund.php';
 
 // ühendus ikt serveris oleva andmebaasiga
 $ikt = connect(HOST, USER, PASS, DBNAME);
-//otsingu vorm
+// otsingu vorm
 otsinguVorm();
 // kasutame vormi kaudu tulnud andmeid
 if(isset($_GET['otsi'])){

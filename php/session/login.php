@@ -16,6 +16,15 @@ if(!empty($_POST['nimi']) and !empty($_POST['parool'])){
     // pärime antud nimega kasutaja andmed andmebaasist
     $sql = 'SELECT * FROM kasutajad WHERE nimi="'.$nimi.'" AND parool="'.md5($parool).'"';
     $result = getData($sql, $ikt);
-    echo '<pre>';
-    print_r($result);
+    // loome sessiooni antud kasutaja jaoks
+    session_start();
+    $_SESSION['kasutaja'] = $result[0]['nimi']; // salvestame kasutajanime
+}
+
+// kui sessioon antud kasutajale on loodud
+// ütleme tere tulemast
+if(!empty($_SESSION['kasutaja'])){
+    echo 'Tere tulemast, '.$_SESSION['kasutaja'].'!<br>';
+}   else {
+    loginVorm();
 }

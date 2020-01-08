@@ -1,5 +1,7 @@
 <?php
 
+// Loodan, et see lahenduskäik on sobilik, kuna ma ei kasutanud mõningaid funktsioone nagu koostaBurger.
+
 // Burgeri detailid
 // Toodete hinnad
 $sai = 1.50;
